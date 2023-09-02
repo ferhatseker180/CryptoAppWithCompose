@@ -21,7 +21,7 @@ class CryptoRepository @Inject constructor(
         return Resource.Success(response)
     }
 
-    suspend fun getCrypto() : Resource<Crypto> {
+    suspend fun getCrypto(id: String): Resource<Crypto> {
         val response = try {
             api.getCrypto()
         }catch (e : Exception){
